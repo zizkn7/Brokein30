@@ -70,7 +70,9 @@ Garde ensuite le **même personnage** (même manche, même téléphone) partout 
 
 ```bash
 python3 make_video.py   # vidéo + sons (Python 3 + Pillow + numpy + ffmpeg)
-python3 add_voice.py    # ajoute la voix off synthétique (apt install espeak-ng mbrola mbrola-fr1)
+./setup_kokoro.sh       # une fois : installe la voix neuronale française Kokoro (ff_siwis)
+python3 add_voice.py    # ajoute la voix off (repli eSpeak si Kokoro absent)
 ```
-La voix off synthétique est une maquette : pour un rendu pro, enregistre les répliques (ou ElevenLabs) aux mêmes moments.
+Voix actuelles : l'héroïne = ff_siwis (naturelle) ; « Yanis » = mélange ff_siwis + voix masculine, baissé d'un ton et filtré.
+Pour encore plus de réalisme : enregistre-toi, ou passe par ElevenLabs, avec les mêmes répliques (liste `SPOKEN` dans add_voice.py).
 Pour modifier l'histoire, change la liste `SCENES` en haut du fichier (textes, durées, sons).
