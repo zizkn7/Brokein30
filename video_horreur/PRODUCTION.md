@@ -69,6 +69,8 @@ Garde ensuite le **même personnage** (même manche, même téléphone) partout 
 ## 6. Régénérer le prototype
 
 ```bash
-python3 make_video.py   # nécessite Python 3 + Pillow + numpy + ffmpeg
+python3 make_video.py   # vidéo + sons (Python 3 + Pillow + numpy + ffmpeg)
+python3 add_voice.py    # ajoute la voix off synthétique (apt install espeak-ng mbrola mbrola-fr1)
 ```
+La voix off synthétique est une maquette : pour un rendu pro, enregistre les répliques (ou ElevenLabs) aux mêmes moments.
 Pour modifier l'histoire, change la liste `SCENES` en haut du fichier (textes, durées, sons).
